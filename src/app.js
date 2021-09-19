@@ -257,7 +257,7 @@ class App{
                     return;
                 }
                 talentPage.find('#next').hide()
-                this.#totalMax = 20 + this.#life.getTalentAllocationAddition(Array.from(this.#talentSelected).map(({id})=>id));
+                this.#totalMax = 2000 + this.#life.getTalentAllocationAddition(Array.from(this.#talentSelected).map(({id})=>id));
                 this.switch('property');
             })
 
@@ -340,10 +340,10 @@ class App{
             return {group, get, set};
         }
 
-        groups.CHR = getBtnGroups("颜值", 0, 10); // 颜值 charm CHR
-        groups.INT = getBtnGroups("智力", 0, 10); // 智力 intelligence INT
-        groups.STR = getBtnGroups("体质", 0, 10); // 体质 strength STR
-        groups.MNY = getBtnGroups("家境", 0, 10); // 家境 money MNY
+        groups.CHR = getBtnGroups("颜值", 0, 1000); // 颜值 charm CHR
+        groups.INT = getBtnGroups("智力", 0, 1000); // 智力 intelligence INT
+        groups.STR = getBtnGroups("体质", 0, 1000); // 体质 strength STR
+        groups.MNY = getBtnGroups("家境", 0, 1000); // 家境 money MNY
 
         const ul = propertyPage.find('#propertyAllocation');
 
